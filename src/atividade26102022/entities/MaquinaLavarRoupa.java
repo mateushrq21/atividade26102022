@@ -33,12 +33,11 @@ public class MaquinaLavarRoupa extends Aparelho{
 	}*/
 	
 	@Override
-	protected double precoFinal() {
-		super.precoFinal();
+	protected void precoFinal() {
+		this.verificarConsumoEnergia(getConsumoEnergia());
 		if(this.capacidade>30.0) {
 			this.precoBase+=500;
 		}
-		return this.precoBase;
 	}
 	
 	@Override

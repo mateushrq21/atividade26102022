@@ -84,9 +84,8 @@ public class Aparelho {
 		this.peso = peso;
 	}
 
-	protected double precoFinal() {
+	protected void precoFinal() {
 		this.verificarConsumoEnergia(this.consumoEnergia);
-		return this.precoBase;
 	}
 	
 	@Override

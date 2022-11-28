@@ -45,14 +45,13 @@ public class Televisao extends Aparelho{
 	}
 	
 	@Override
-	protected double precoFinal() {
-		super.precoFinal();
+	protected void precoFinal() {
+		this.verificarConsumoEnergia(getConsumoEnergia());
 		if(this.resolucao > 40) {
 			this.precoBase+=this.precoBase*0.3;
 		}if(this.receptorTDT==true) {
 			this.precoBase+=500.0;
 		}
-		return this.precoBase;
 	}
 	
 	@Override
